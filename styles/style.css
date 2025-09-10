@@ -1,0 +1,271 @@
+/* 全体の基本設定 */
+body {
+    font-family: sans-serif; /* 見やすいフォントに */
+    font-size: 15px; /* 基本のフォントサイズを少し大きく */
+    line-height: 1.6; /* 行間を少し広げる */
+    color: #333; /* 文字色を少し柔らかい黒に */
+    margin: 0;
+    padding-top: 60px; /* 固定ヘッダー分のスペースを確保 */
+}
+
+/* 見出しのスタイル */
+h1, h2 {
+    color: #0056b3; /* 見出しの色を青系に */
+}
+
+/* リンクのスタイル */
+a {
+    color: #007bff;
+    text-decoration: none; /* 下線を消す */
+}
+
+/* フッターのスタイル */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+header {
+    background-color: #333; /* 背景色を濃いグレーに */
+    width: 100%;
+    top: 0;
+    position: fixed; /* 要素をビューポートに固定 */
+    top: 0; /* 上端に配置 */
+    z-index: 1000;
+    padding: 0 20px; /* 左右に余白を追加 */
+    box-sizing: border-box; /* paddingを幅に含める */
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between; /* 両端に配置 */
+    align-items: center; /* 上下中央揃え */
+    max-width: 1200px; /* コンテンツ幅の最大 */
+    margin: 0 auto; /* 中央揃え */
+    height: 60px; /* ヘッダーの高さを指定 */
+}
+
+.logo {
+    font-size: 1.4em; /* 17px * 1.4 = 約24px */
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.hamburger-menu {
+    display: none; /* デスクトップでは非表示 */
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 48px;
+    height: 48px;
+    position: relative;
+}
+
+.hamburger-line {
+    position: absolute;
+    left: 11px;
+    width: 26px;
+    height: 2px;
+    background-color: white;
+    transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all .8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.hamburger-line:nth-of-type(1) {
+    top: 14px;
+}
+.hamburger-line:nth-of-type(2) {
+    top: 23px;
+}
+.hamburger-line:nth-of-type(3) {
+    top: 32px;
+}
+
+/* メニューオープン時のアニメーション */
+.hamburger-menu.active .hamburger-line:nth-of-type(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+.hamburger-menu.active .hamburger-line:nth-of-type(2) {
+    opacity: 0;
+}
+.hamburger-menu.active .hamburger-line:nth-of-type(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+.print-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem; /* 他のメニューとサイズ感を合わせる */
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 5px 10px; /* リンクのクリック範囲を広げ、見た目の余白も確保 */
+    border-radius: 20px; /* 角を丸くして柔らかい印象に */
+}
+.print-button:hover {
+    color: #333; /* ホバー時の色 */
+    background-color: white;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* メニューと印刷ボタンの間の隙間 */
+}
+
+nav ul {
+    list-style: none; /*箇条書きの点を消す*/
+    margin: 0;
+    padding: 0;
+    display: flex; /* Flexboxを有効化 */
+    align-items: center; /* 垂直方向の中央揃え */
+}
+
+nav ul li {
+    /* display: inline-block; は不要になるので削除 */
+    margin: 0 5px; /* li自体のマージンは少し減らす */
+}
+
+nav ul li a {
+    color: white; /*文字色を白に*/
+    text-decoration: none;
+    font-size: 1.4rem; /* bodyのフォントサイズと同じ (17px) */
+    padding: 8px 16px; /* リンクのクリック範囲を広げ、見た目の余白も確保 */
+    border-radius: 20px; /* 角を丸くして柔らかい印象に */
+    transition: all 0.3s ease; /* 色と背景色の変化を滑らかに */
+}
+
+nav ul li a:hover {
+    background-color: white; /* マウスを乗せたら背景色を変える */
+    color: black; /* 文字色は白のまま */
+}
+
+.lang-switcher a {
+    border: 1px solid white;
+    padding: 4px 10px; /* paddingを少し調整 */
+    border-radius: 5px;
+    color:white
+}
+.lang-switcher a:hover {
+    background-color: white;
+    color: #333;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 3rem; /* 15px * 1.8 = 27px */
+    margin: 0 10px;
+    transition: color 0.3s, transform 0.3s;
+    display: inline-block;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    transform: translateY(-5px);
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 0.9rem; /* 約15.3px */
+    color: #6c757d;
+}
+
+main {
+    max-width: 960px; /* コンテンツの最大幅 */
+    margin: 20px auto; /* 上下に20px、左右は自動で中央配置 */
+    padding: 20px; /* 内側の余白 */
+    background-color: white; /* コンテンツエリアの背景色 */
+    box-sizing: border-box; /* paddingを含めて幅を計算する */
+}
+
+.profile-container {
+    display: flex;
+    align-items: flex-start; /* 上揃えで配置 */
+    gap: 30px; /* 写真とテキストの間の余白 */
+}
+
+.profile-photo {
+    flex: 1; /* 比率で幅を指定 */
+    max-width: 300px; /* 写真の最大幅 */
+}
+
+.profile-photo img {
+    width: 100%;
+    height: auto;
+}
+
+.profile-details {
+    flex: 2; /* 写真に対して2倍の幅をとる */
+}
+
+.nav__list {
+  margin: 0;
+  padding: 100px 0 0;
+  list-style: none;
+}
+
+.nav__item {
+  padding: 0 20px;
+}
+
+.nav__link {
+  display: block;
+  padding: 15px 0;
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+}
+/* --- レスポンシブ対応 --- */
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block; /* スマホサイズで表示 */
+        z-index: 101; /* メニューより手前に表示 */
+        position: relative;
+    }
+
+    nav ul {
+        position: absolute;
+        top: 60px; /* ヘッダーの高さ分下にずらす */
+        left: 0;
+        width: 100%;
+        background-color: #333; /* ヘッダーと同じ背景色 */
+        flex-direction: column;
+        padding: 0; /* paddingは開閉アニメーション後に適用 */
+        max-height: 0; /* 初期状態では高さを0にして隠す */
+        overflow: hidden; /* はみ出たコンテンツを隠す */
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out; /* 高さとpaddingをアニメーション */
+    }
+
+    nav ul.show {
+        max-height: 500px; /* メニューの最大高さを設定（コンテンツに合わせて調整） */
+        padding: 10px 0; /* 開いたときにpaddingを適用 */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* 上下のマージンを調整 */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem;
+    }
+
+    .profile-container {
+        flex-direction: column; /* 縦並びにする */
+        align-items: center; /* 中央揃え */
+    }
+
+    .lang-switcher {
+        display: none; /* スマホサイズでは言語切り替えを非表示 */
+    }
+}
