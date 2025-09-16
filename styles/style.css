@@ -252,6 +252,55 @@ main {
     flex: 1;
 }
 
+.work-details {
+    flex: 1;
+}
+
+/* --- News List --- */
+.news-list, .news-list-home {
+    list-style: none;
+    padding-left: 0;
+}
+
+.news-list li, .news-list-home li {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.news-list li time, .news-list-home li time {
+    margin-right: 20px;
+    color: #666;
+    flex-shrink: 0; /* 日付が改行されないように */
+}
+
+/* トップページのニュースリストは3件まで表示 */
+.news-list-home li:nth-child(n+4) {
+    display: none;
+}
+
+.more-link {
+    display: block;
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* --- Timeline for About page --- */
+.timeline {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline li {
+    margin-bottom: 10px;
+}
+
+.timeline .year {
+    font-weight: bold;
+    margin-right: 1em;
+}
 /* --- PC表示のスタイル --- */
 @media (min-width: 769px) {
     .profile-photo {
