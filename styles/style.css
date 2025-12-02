@@ -301,6 +301,36 @@ main {
     font-weight: bold;
     margin-right: 1em;
 }
+
+/* カードデザインの基本スタイル */
+.card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 1px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    overflow: hidden; /* 角丸を維持するため */
+}
+
+.card-header {
+    padding: 1rem 1.5rem;
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 2.25rem;
+}
+
+.card-body {
+    padding: 0 3rem 2.5rem;
+}
+
+/* 連絡先カードを少し目立たせるスタイル */
+.contact-card {
+    background-color: #f0f8ff; /* AliceBlue */
+    border-color: #bde0fe;
+}
+
 /* --- PC表示のスタイル --- */
 @media (min-width: 769px) {
     .profile-photo {
